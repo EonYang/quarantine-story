@@ -26,6 +26,7 @@ img{
 [JavaScript]
 window.danIsStabbed = 0;
 window.shoppingForMyself = 1;
+window.goToHospital = 0;
 window.playedStarDewValley = 0;
 window.boughtOverCooked = 0;
 window.visitingDan = 0;
@@ -220,7 +221,7 @@ It&#39;s a stangers voice.
 
 &quot;I&#39;m sorry to inform you, but your friend is in danger. He just got stabbed on the street. I&#39;m just passing by and I unlocked his phone with his finger and you seem like the last person he had talked to, so...&quot;
 
-[[WTF...]]</tw-passagedata><tw-passagedata pid="16" name="Choice of wearing a mask" tags="" position="700,850" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/choice_of_mask.jpg&#39;, alt:&#39;picture of me thinking about wearing masks&#39;}
+[[WTF...]]</tw-passagedata><tw-passagedata pid="16" name="Choice of wearing a mask" tags="" position="700,782" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/choice_of_mask.jpg&#39;, alt:&#39;picture of me thinking about wearing masks&#39;}
 
 [if window.shoppingForMyself === 1]
 
@@ -231,13 +232,7 @@ But I just can&#39;t resist.
 I read articles about how people in Wuhan use masks to protect them from the COVID-19, but I also saw news about people get stabs in NYC just for wearing masks.
 
 [continue]
-[if window.goToHospital === 1]
 
-I know the city is under quarantine right now, but I must go to see Dan!
-
-But, the question is:
-
-[continue]
 [if window.visitingDan === 1 &amp;&amp; window.goToHospital === 0]
 
 I know the city is under quarantine right now, and it seems unwise to go out.
@@ -248,6 +243,18 @@ I read articles about how people in Wuhan use masks to protect them from the COV
 
 [continue]
 
+[if window.goToHospital === 1]
+
+However, the question is: should I wear a mask?
+
+Dan was wearing a mask and got stabbed.
+
+[[Undoubtly yes, though it means I&#39;ll probably get stabbed like Dan-&gt;Wear mask]]
+
+[[Shit, I don&#39;t want get stabed-&gt;Not wear mask]]
+
+[else]
+
 Should I wear a mask?
 
 &lt;hr&gt;
@@ -255,6 +262,8 @@ Should I wear a mask?
 [[Undoubtly yes-&gt;Wear mask]]
 
 [[Shit, I don&#39;t want get stabed-&gt;Not wear mask]]
+
+[continue]
 
 [[fuck it, let&#39;s flip a coin-&gt;coinFlip]]</tw-passagedata><tw-passagedata pid="17" name="Wear mask" tags="" position="900,900" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/going_out_with_mask.jpg&#39;, alt:&#39;picture of me not wearing a mask walking on the street&#39;}
 
@@ -503,13 +512,7 @@ window.shoppingForMyself = 0;
 
 Dan is my best friend, I must go to the hospital and bring him beer!
 
-However, the question is: should I wear a mask?
-
-Dan was wearing a mask and got stabbed.
-
-[[Undoubtly yes, though it means I&#39;ll probably get stabbed like Dan-&gt;Wear mask]]
-
-[[Shit, I don&#39;t want get stabed-&gt;Not wear mask]]</tw-passagedata><tw-passagedata pid="31" name="Think Again" tags="" position="1700,400" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/bailed.jpg&#39;, alt:&#39;picture of me valuating about Dan and the pandemic&#39;}
+[[Dan, wait for me! I&#39;m coming!-&gt;Choice of wearing a mask]] </tw-passagedata><tw-passagedata pid="31" name="Think Again" tags="" position="1700,400" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/bailed.jpg&#39;, alt:&#39;picture of me valuating about Dan and the pandemic&#39;}
 
 
 He will be fine. I will visit him some other time.
@@ -558,8 +561,7 @@ Which one to watch?
 [[475 deaths in Italy in 24 hours]]
 
 [if window.whatchedVideoAll === 0]
-[[I&#39;m not interested to either of those videos-&gt;Start]]</tw-passagedata><tw-passagedata pid="35" name="New York State Will Go On PAUSE Sunday Night" tags="" position="450,1200" size="100,100">**waiting img***
-{embed image: &#39;https://eonyang.github.io/quarantine-story/images/aaaa.jpg&#39;, alt:&#39;picture of &#39;}
+[[I&#39;m not interested to either of those videos-&gt;Start]]</tw-passagedata><tw-passagedata pid="35" name="New York State Will Go On PAUSE Sunday Night" tags="" position="449,1200" size="100,100">&lt;iframe style=&quot;width:100%; height:300px; display:block;&quot; src=&quot;https://www.youtube.com/embed/pUxwctnYwH8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 [JavaScript]
 window.whatchedVideo1 = 1;
@@ -574,8 +576,8 @@ Shit, seems like, it&#39;s my last chance to go out and buy some groceries, espe
 
 [[Go out and buy some more Latiao-&gt;Choice of wearing a mask]] 
 
-[[Let me watch some other videos-&gt;Watch Youtube]]</tw-passagedata><tw-passagedata pid="36" name="Tracking President Trump&#39;s Response To COVID-19" tags="" position="300,1200" size="100,100">**waiting img***
-{embed image: &#39;https://eonyang.github.io/quarantine-story/images/aaaa.jpg&#39;, alt:&#39;picture of &#39;}
+[[Let me watch some other videos-&gt;Watch Youtube]]</tw-passagedata><tw-passagedata pid="36" name="Tracking President Trump&#39;s Response To COVID-19" tags="" position="300,1199" size="100,100">&lt;iframe style=&quot;width:100%; height:300px; display:block;&quot;
+src=&quot;https://www.youtube.com/embed/2eB_xCk5ABw&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 [JavaScript]
 window.whatchedVideo2 = 1;
@@ -593,8 +595,8 @@ I must eat some snacks to keep calm.
 
 [[Go to eat some snacks-&gt;Eat snacks]] 
 
-[[Let me watch some other videos-&gt;Watch Youtube]]</tw-passagedata><tw-passagedata pid="37" name="475 deaths in Italy in 24 hours" tags="" position="150,1200" size="100,100">**waiting img***
-{embed image: &#39;https://eonyang.github.io/quarantine-story/images/aaaa.jpg&#39;, alt:&#39;picture of &#39;}
+[[Let me watch some other videos-&gt;Watch Youtube]]</tw-passagedata><tw-passagedata pid="37" name="475 deaths in Italy in 24 hours" tags="" position="149,1200" size="100,100">&lt;iframe style=&quot;width:100%; height:300px; display:block;&quot;
+src=&quot;https://www.youtube.com/embed/B9JdcKfSpHQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 [JavaScript]
 window.whatchedVideo3 = 1;
@@ -631,7 +633,7 @@ Call it!
 
 [[The opposite of heads-&gt;tails]]
 
-</tw-passagedata><tw-passagedata pid="39" name="on the ridge" tags="" position="625,1150" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/onTheRidge.png&#39;, alt:&#39;picture of my hidden snack box&#39;}
+</tw-passagedata><tw-passagedata pid="39" name="on the ridge" tags="" position="663,1167" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/onTheRidge.png&#39;, alt:&#39;picture of my hidden snack box&#39;}
 
 Can it be?  
 
@@ -658,7 +660,7 @@ Ackkk, it&#39;s everywhere! The coronavirus is everywhere!!
 
 [[I must venture onward.  There are many beautiful things to experience and time is running out-&gt;adventure continues]]
 
-</tw-passagedata><tw-passagedata pid="42" name="Nap" tags="" position="576,1511.3333333333333" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/nap
+</tw-passagedata><tw-passagedata pid="42" name="Nap" tags="" position="576,1511" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/nap
 .png&#39;, alt:&#39;you are waking up in your bed&#39;}
 
 You awake in a sweat. You&#39;ve had this dream many times since you self isolated but it never feels familiar.  
@@ -666,7 +668,7 @@ You awake in a sweat. You&#39;ve had this dream many times since you self isolat
 [[Well.  I&#39;m awake now.  What to do?-&gt;Start]]
 
 
-</tw-passagedata><tw-passagedata pid="43" name="adventure continues" tags="" position="813.3333333333334,1500" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/adventureContinues.png&#39;, alt:&#39;Your reflection is in a puddle&#39;}
+</tw-passagedata><tw-passagedata pid="43" name="adventure continues" tags="" position="813,1500" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/adventureContinues.png&#39;, alt:&#39;Your reflection is in a puddle&#39;}
 
 It has been raining.  But you are dry, and the world is large.  Walking exactly 6 feet behind the rogue citizen in front of you, a sparkle catches your eye.  
 
