@@ -21,7 +21,7 @@ img{
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
-</script><tw-passagedata pid="1" name="Intro" tags="" position="100,400" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/cover.jpg&#39;, alt:&#39;picture of NYC attacked by coronaviruses&#39;}
+</script><tw-passagedata pid="1" name="Intro" tags="" position="97,397" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/cover.jpg&#39;, alt:&#39;picture of NYC attacked by coronaviruses&#39;}
 
 [JavaScript]
 window.danIsStabbed = 0;
@@ -30,12 +30,26 @@ window.goToHospital = 0;
 window.playedStarDewValley = 0;
 window.boughtOverCooked = 0;
 window.visitingDan = 0;
-window.endings = 4;
 window.endingVisited = 0;
 window.whatchedVideo1 = 0;
 window.whatchedVideo2 = 0;
 window.whatchedVideo3 = 0;
 window.whatchedVideoAll = 0;
+
+window.totalEnding = 5;
+window.endingsVisitedCount = 0;
+  
+if (window.endingsVisited !== undefined){
+
+  for (let ending in window.endingsVisited){
+  	window.endingsVisitedCount += window.endingsVisited[ending]
+  }
+
+  if(window.endingsVisitedCount&gt;0){
+  alert(&#96;Endings visited: 			${window.endingsVisitedCount}/${window.totalEnding}&#96;);
+	}
+}
+  
 [continue]
 
 The start of this story.
@@ -290,7 +304,19 @@ Most importantly, I must bring some beers to Dan.
 
 &lt;hr&gt;
 
-[[Go the the grocery store]]</tw-passagedata><tw-passagedata pid="19" name="Get stabbed" tags="" position="1100,900" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/got_stabbed_for_wearing_mask.jpg&#39;, alt:&#39;picture of me get stabbed&#39;}
+[[Go the the grocery store]]</tw-passagedata><tw-passagedata pid="19" name="Get stabbed" tags="" position="1100,900" size="100,100">[JavaScript]
+
+if (window.endingsVisited == undefined){
+	window.endingsVisited = {};
+}
+
+window.endingsVisited.dieForWearingMask = 1;
+
+[continue]
+
+
+
+{embed image: &#39;https://eonyang.github.io/quarantine-story/images/got_stabbed_for_wearing_mask.jpg&#39;, alt:&#39;picture of me get stabbed&#39;}
 
 
 It&#39;s not dangerous at all! I think.
@@ -428,7 +454,19 @@ Snap!
 
 
 
-</tw-passagedata><tw-passagedata pid="26" name="Fall through cellar door" tags="" position="1500,1050" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/fall_through_a_cellar_door.jpg&#39;, alt:&#39;picture of me fall into a cellar on the sidewalk&#39;}
+</tw-passagedata><tw-passagedata pid="26" name="Fall through cellar door" tags="" position="1500,1050" size="100,100">[JavaScript]
+
+if (window.endingsVisited == undefined){
+	window.endingsVisited = {};
+}
+
+window.endingsVisited.dieOfFallingThroughCellar = 1;
+
+[continue]
+
+
+
+{embed image: &#39;https://eonyang.github.io/quarantine-story/images/fall_through_a_cellar_door.jpg&#39;, alt:&#39;picture of me fall into a cellar on the sidewalk&#39;}
 
 
 I fall through a cellar door on the side walk!
@@ -451,7 +489,19 @@ I feel so tired, I think I need to get some sleep.
 
 ** You bleed to death, game over **
 
-[[Restart Game-&gt;Intro]]</tw-passagedata><tw-passagedata pid="27" name="Thank god my ass is saved" tags="" position="1700,900" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/shot_died.jpg&#39;, alt:&#39;picture of me getting shot by the police&#39;}
+[[Restart Game-&gt;Intro]]</tw-passagedata><tw-passagedata pid="27" name="Thank god my ass is saved" tags="" position="1700,900" size="100,100">[JavaScript]
+
+if (window.endingsVisited == undefined){
+	window.endingsVisited = {};
+}
+
+window.endingsVisited.shotByTheCop = 1;
+
+[continue]
+
+
+
+{embed image: &#39;https://eonyang.github.io/quarantine-story/images/shot_died.jpg&#39;, alt:&#39;picture of me getting shot by the police&#39;}
 
 
 Oh thank god, the cops have arrived. 
@@ -475,7 +525,18 @@ Shit I think I got shot.
 ** You died **
 
 [[Restart Game-&gt;Intro]]
-</tw-passagedata><tw-passagedata pid="28" name="What&#39;s wrong?" tags="" position="1700,775" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/got_stabbed_in_fight.jpg&#39;, alt:&#39;picture of me getting stabbed&#39;}
+</tw-passagedata><tw-passagedata pid="28" name="What&#39;s wrong?" tags="" position="1700,775" size="100,100">[JavaScript]
+
+if (window.endingsVisited == undefined){
+	window.endingsVisited = {};
+}
+
+window.endingsVisited.dieForStabbedInGrocery = 1;
+
+[continue]
+
+
+{embed image: &#39;https://eonyang.github.io/quarantine-story/images/got_stabbed_in_fight.jpg&#39;, alt:&#39;picture of me getting stabbed&#39;}
 
 
 Shit, my stomach hurts like shit too.
@@ -531,11 +592,24 @@ I don&#39;t remember when was the last time I ate food;
 
 Damn I can&#39;t see anything, I wanna sleep now.
 
-[[Continue]]</tw-passagedata><tw-passagedata pid="33" name="Continue" tags="" position="1900,200" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/died_of_playing_games.jpg&#39;, alt:&#39;picture of me dead&#39;}
+[[Continue]]</tw-passagedata><tw-passagedata pid="33" name="Continue" tags="" position="1899,199" size="100,100">[JavaScript]
+
+if (window.endingsVisited == undefined){
+	window.endingsVisited = {};
+}
+
+window.endingsVisited.dieOfPlayingVideoGame = 1;
+
+[continue]
+
+
+{embed image: &#39;https://eonyang.github.io/quarantine-story/images/died_of_playing_games.jpg&#39;, alt:&#39;picture of me dead&#39;}
 
 ** You played too much video game, which caused your sudden death **
 
 ** Game Over **
+
+&lt;hr&gt;
 
 [[Restart Game-&gt;Intro]]</tw-passagedata><tw-passagedata pid="34" name="Watch Youtube" tags="" position="300,1050" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/youtube.jpg&#39;, alt:&#39;picture of Youtube front page&#39;}
 
@@ -643,16 +717,16 @@ But what are the chances that a flipped coin result in neither heads nor tails?
 
 [[This must be a sign from the universe to free myself from this quarantine-&gt;Start Journey]]
 
-</tw-passagedata><tw-passagedata pid="40" name="tails" tags="" position="850,1175" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/onTheRidge.png&#39;, alt:&#39;picture of my hidden snack box&#39;}
+</tw-passagedata><tw-passagedata pid="40" name="tails" tags="" position="892,1181" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/onTheRidge.png&#39;, alt:&#39;picture of my hidden snack box&#39;}
 
 It is heads.  Forever wishing for a different outcome, now you must obey the governement and abide by the quarantine. 
 
 It&#39;s ok though because you have many options in your room.  
 
-[[There is only one thing to do-&gt;Start]]
+[[There is only one thing to do-&gt;Nap]]
 
 
-</tw-passagedata><tw-passagedata pid="41" name="Start Journey" tags="" position="625,1350" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/coronavirus.png&#39;, alt:&#39;picture of a germ, the coronavirus&#39;}
+</tw-passagedata><tw-passagedata pid="41" name="Start Journey" tags="" position="624,1349" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/coronavirus.png&#39;, alt:&#39;picture of a germ, the coronavirus&#39;}
 
 Ackkk, it&#39;s everywhere! The coronavirus is everywhere!!
 
@@ -660,13 +734,11 @@ Ackkk, it&#39;s everywhere! The coronavirus is everywhere!!
 
 [[I must venture onward.  There are many beautiful things to experience and time is running out-&gt;adventure continues]]
 
-</tw-passagedata><tw-passagedata pid="42" name="Nap" tags="" position="576,1511" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/nap
-.png&#39;, alt:&#39;you are waking up in your bed&#39;}
+</tw-passagedata><tw-passagedata pid="42" name="Nap" tags="" position="576,1510" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/awakening.jpg&#39;, alt:&#39;you are waking up in your bed&#39;}
 
 You awake in a sweat. You&#39;ve had this dream many times since you self isolated but it never feels familiar.  
 
 [[Well.  I&#39;m awake now.  What to do?-&gt;Start]]
-
 
 </tw-passagedata><tw-passagedata pid="43" name="adventure continues" tags="" position="813,1500" size="100,100">{embed image: &#39;https://eonyang.github.io/quarantine-story/images/adventureContinues.png&#39;, alt:&#39;Your reflection is in a puddle&#39;}
 
